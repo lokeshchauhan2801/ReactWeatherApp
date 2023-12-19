@@ -1,0 +1,140 @@
+body{
+    background-image: linear-gradient(180deg, #130574 0%, #3b2f80 100%);
+
+}
+
+.container{
+    width: 607px;
+    height:100%;
+    margin:auto;
+    margin: top 20px;
+    border-radius:12px;
+    /* background-image: linear-gradient(180deg, #130574 0%, #3b2f80 100%); */
+    background-image: url('../Assets/BackgroundImage.png');
+    background-size: 100% 100%;
+    margin-bottom: 20px;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 4px 8px rgba(17, 255, 247, 0.3);
+
+}
+.top-bar{
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    padding-top:30px;
+}
+
+.top-bar input{
+    display:flex;
+    width: 362px;
+    height: 78px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding-left: 40px;
+    color: #626262;
+    font-size: 20px;
+    font-weight:500;
+}
+
+.search-icon{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 78px;
+    height: 78px;
+    background:white;
+    border-radius: 40px;
+    cursor: pointer;
+     
+}
+
+.weather-image{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  
+}
+
+.climate{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size:50px;
+    font-weight: 500;
+    margin-top:85px;
+    margin-left: 20px;
+
+}
+
+.weather-temp{
+     display: flex;
+     justify-content: center;
+     color: white;
+     font-size: 120px;
+     font-weight:500;
+}
+
+.weather-location{
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 60px;
+    font-weight: 500;
+    
+}
+.data-container{
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+}
+
+.element{
+    margin: auto;
+    display: flex;
+    align-items: flex-start;
+    gap : 12px;
+    margin-bottom:10px;
+}
+
+.data{
+    font-size: 34px;
+    font-weight:500;
+}
+
+.text{
+    font-size: 20px;
+    font-weight:500px;
+
+}
+
+.icon{
+    margin-top: 10px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        height: auto;
+    }
+
+    .top-bar input {
+        width: 100%;
+    }
+
+    /* Add more responsive styles as needed */
+}
+
+/* Media query for tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* Add tablet-specific styles */
+}
+
+/* Media query for larger screens */
+@media (min-width: 1200px) {
+    /* Add larger screen-specific styles */
+}
