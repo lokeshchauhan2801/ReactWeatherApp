@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './WeatherApp.css'
 
 import clear_icon from "../Assets/clear.png"
@@ -91,11 +91,23 @@ const WeatherApp = () => {
         } catch (error) { 
             console.error('Error fetching weather data : ', error)
             document.write("Input can't be empty .",error)
-
         }
-   
 
-    }
+    };
+    useEffect(()=>{
+        const handleKeyPress = (e)=>{ // to handle enter to search 
+            if (e.key ==='Enter'){
+                search();
+            }
+         }
+         document.addEventListener('keydown', handleKeyPress) ;
+
+         return() => {
+            document.removeEventListener('keydown', handleKeyPress);
+         };
+
+
+    },[]);
 
     return (
         <div className='container'>
