@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './WeatherApp.css'
+
 import clear_icon from "../Assets/clear.png"
 import cloud_icon from "../Assets/cloud.png"
 import drizzle_icon from "../Assets/drizzle.png"
@@ -9,6 +10,8 @@ import wind_icon from "../Assets/wind.png"
 import snow_icon from "../Assets/snow.png"
 import rain_icon from '../Assets/rain.png'
 import api_key from './WeatherAppApi'
+import timeZone from '../Assets/timezone.png'
+import country from '../Assets/Countryfleg.png'
 
 
 
@@ -87,7 +90,7 @@ const WeatherApp = () => {
             }
             
 
-        } catch (error) {
+        } catch (error) { 
             console.error('Error fetching weather data : ', error)
             document.write("Input can't be empty .",error)
 
@@ -130,14 +133,14 @@ const WeatherApp = () => {
             </div>
             <div className='data-container'>
             <div className='element'>
-                    <img alt='' className='icon'></img>
+                    <img src={country} alt='' className='icon'></img>
                     <div className="data">
                         <div className="wind-rate">{weatherData.country}</div>
                         <div className='text'>Country</div>
                     </div>
                 </div>
                 <div className='element'>
-                    <img  alt='' className='icon'></img>
+                    <img src={timeZone} alt='' className='icon'></img>
                     <div className="data">
                         <div className="wind-rate">{weatherData.convertTimeZone}</div>
                         <div className='text'>Time Zone</div>
