@@ -10,7 +10,9 @@ import wind_icon from "../Assets/wind.png"
 import snow_icon from "../Assets/snow.png"
 import rain_icon from '../Assets/rain.png'
 import api_key from './WeatherAppApi'
-import timeZone from '../Assets/timezone.png'
+import countryvini from '../Assets/Countryvini.png'
+import timevini from '../Assets/Timevini.png'
+
 import country from '../Assets/Countryfleg.png'
 
 
@@ -133,14 +135,14 @@ const WeatherApp = () => {
             </div>
             <div className='data-container'>
             <div className='element'>
-                    <img src={country} alt='' className='icon'></img>
+                    <img src={countryvini} alt='' className='icon'></img>
                     <div className="data">
                         <div className="wind-rate">{weatherData.country}</div>
                         <div className='text'>Country</div>
                     </div>
                 </div>
                 <div className='element'>
-                    <img src={timeZone} alt='' className='icon'></img>
+                    <img src={timevini} alt='' className='icon'></img>
                     <div className="data">
                         <div className="wind-rate">{weatherData.convertTimeZone}</div>
                         <div className='text'>Time Zone</div>
