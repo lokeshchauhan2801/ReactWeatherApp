@@ -5,17 +5,13 @@ import clear_icon from "../Assets/clear.png"
 import cloud_icon from "../Assets/cloud.png"
 import drizzle_icon from "../Assets/drizzle.png"
 import humidity_icon from "../Assets/humidity.png"
-import search_icon from "../Assets/search.png"
 import wind_icon from "../Assets/wind.png"
 import snow_icon from "../Assets/snow.png"
 import rain_icon from '../Assets/rain.png'
 import api_key from './WeatherAppApi'
 import countryvini from '../Assets/Countryvini.png'
 import timevini from '../Assets/Timevini.png'
-
-import country from '../Assets/Countryfleg.png'
-
-
+import searchicon from '../Assets/searchicon.png'
 
 const WeatherApp = () => {
     const [weatherIcon, setWeatherIcon] = useState(cloud_icon)
@@ -34,6 +30,7 @@ const WeatherApp = () => {
         if (!element || element.value === ' ') {
             return 0;
         }
+      
         try {
 
             let url = `https://api.openweathermap.org/data/2.5/weather?q=${element.value}&units=Metric&appid=${api_key}`
@@ -62,7 +59,6 @@ const WeatherApp = () => {
                 setWeatherIcon(snow_icon)
             }
             else {
-                console.log('it is coming to else part')
                 setWeatherIcon(clear_icon)
             }
 
@@ -89,14 +85,15 @@ const WeatherApp = () => {
                 const offsetString = date.toISOString().substr(11, 5);
             
                 return offsetString;
-            }
-            
+            }  
+        
 
         } catch (error) { 
             console.error('Error fetching weather data : ', error)
             document.write("Input can't be empty .",error)
 
         }
+   
 
     }
 
@@ -107,7 +104,7 @@ const WeatherApp = () => {
                 <input type='text' className='cityInput' placeholder='search' />
                 <div className='search-icon' onClick={() => search()}>
 
-                    <img src={search_icon} alt='search-icon ' />
+                    <img src={searchicon} alt='search-icon ' />
                 </div>
             </div>
             <div className="weather-image">
