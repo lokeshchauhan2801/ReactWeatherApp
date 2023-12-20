@@ -33,7 +33,7 @@ const WeatherApp = () => {
       
         try {
 
-            let url = `https://api.openweathermap.org/data/2.5/weather?q=${element.value}&units=Metric&appid=${api_key}`
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${element.value.trim()}&units=Metric&appid=${api_key}`
             let response = await fetch(url);
             let data = await response.json();
             if (data.weather[0].icon === '01d' || data.weather[0].icon === '01n') {
@@ -65,7 +65,7 @@ const WeatherApp = () => {
             setWeatherData({
                 humidity: data.main.humidity,
                 wind: data.wind.speed,
-                temperature: data.main.temp,
+                temperature: Math.floor(data.main.temp),
                 location: data.name,
                 climate : data.weather[0].main,
                 country : data.sys.country,
